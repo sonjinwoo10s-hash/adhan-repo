@@ -1020,5 +1020,89 @@
     "region": "مصر",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/b97727c9dffc.mp3"
+  },
+  {
+    "id": "fajr_1",
+    "name": "أذان الفجر - عام",
+    "region": "أذان الفجر",
+    "isFajr": true,
+    "url": "https://archive.org/download/adhan-fajr-afasy/Adhan-Fajr-Afasy.mp3"
+  },
+  {
+    "id": "fajr_2",
+    "name": "أذان الفجر - الشيخ محمد بن ماجد حكيم",
+    "region": "أذان الفجر",
+    "isFajr": true,
+    "url": "https://archive.org/download/adhan_by_sheikh_muhammad_bin_majid_hakim_fajr/adhan_by_sheikh_muhammad_bin_majid_hakim_fajr.mp3"
+  },
+  {
+    "id": "fajr_3",
+    "name": "أذان الفجر - الدوحة (قطر)",
+    "region": "أذان الفجر",
+    "isFajr": true,
+    "url": "https://archive.org/download/adhan-doha-qatar-01-fajr-adhan-1/Adhan_Doha_Qatar_01_Fajr_Adhan%20%281%29.mp3"
+  },
+  {
+    "id": "fajr_4",
+    "name": "أذان الفجر - المسجد الحرام (الشيخ يونس خوج)",
+    "region": "أذان الفجر",
+    "isFajr": true,
+    "url": "https://archive.org/download/MakkahAdhanAl-fajr5-9-13SheikhYunusKhoja/MakkahAdhanAl-fajr5-9-13SheikhYunusKhoja.mp3"
+  },
+  {
+    "id": "fajr_5",
+    "name": "أذان الفجر - تسجيل 1",
+    "region": "أذان الفجر",
+    "isFajr": true,
+    "url": "https://archive.org/download/AlharamAlmakki_20150607/AdhanAlFajr20-8-1436.mp3"
+  },
+  {
+    "id": "fajr_6",
+    "name": "أذان الفجر - المسجد النبوي (الشيخ عصام سنبل)",
+    "region": "أذان الفجر",
+    "isFajr": true,
+    "url": "https://archive.org/download/31813MadinahFajrAdhanSheikhSunbul/31-8-13%20Madinah%20Fajr%20Adhan%20Sheikh%20Sunbul.mp3"
+  },
+  {
+    "id": "fajr_7",
+    "name": "أذان الفجر - تسجيل 2",
+    "region": "أذان الفجر",
+    "isFajr": true,
+    "url": "https://archive.org/download/February42012FajrAdhanAudios/SheikhAfeefi_Fajr_2-4-12.mp3"
+  },
+  {
+    "id": "fajr_8",
+    "name": "أذان الفجر - تسجيل 3",
+    "region": "أذان الفجر",
+    "isFajr": true,
+    "url": "https://archive.org/download/AlharamAlmakki_20150602_0628/AdhanAlFajr15-8-1436.mp3"
+  },
+  {
+    "id": "fajr_9",
+    "name": "أذان الفجر - تسجيل 4",
+    "region": "أذان الفجر",
+    "isFajr": true,
+    "url": "https://archive.org/download/AlharamAlmakki_20150608/AdhanAlFajr21-8-1436.mp3"
+  },
+  {
+    "id": "fajr_10",
+    "name": "أذان الفجر - منصور الزهراني",
+    "region": "أذان الفجر",
+    "isFajr": true,
+    "url": "https://archive.org/download/adhan_fajr_mansour_zahrani/adhan_fajr_mansour_zahrani.mp3"
+  },
+  {
+    "id": "fajr_11",
+    "name": "أذان الفجر - المسجد الحرام (الشيخ علي ملا)",
+    "region": "أذان الفجر",
+    "isFajr": true,
+    "url": "https://archive.org/download/MakkahFajrAdhan6913SheikhAliMullah/Makkah%20Fajr%20Adhan%206-9-13%20Sheikh%20Ali%20Mullah.mp3"
+  },
+  {
+    "id": "fajr_12",
+    "name": "أذان الفجر - مشاري راشد العفاسي",
+    "region": "أذان الفجر",
+    "isFajr": true,
+    "url": "https://archive.org/download/adhan-call-to-prayer-mishary-rashid-alafasy-fajr-maqam-hijaz-hd-320-kbps-1/Adhan%20%28Call%20to%20prayer%29%20_%20Mishary%20Rashid%20Alafasy%20_%20Fajr%20_%20Maqam%20Hijaz%20%E1%B4%B4%E1%B4%B0%20%28320%20kbps%29%20%281%29.mp3"
   }
 ]
