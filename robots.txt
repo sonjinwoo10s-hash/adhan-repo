@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sonjinwoo10s-hash.github.io/adhan-repo/sitemap.xml
