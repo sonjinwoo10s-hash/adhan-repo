@@ -14,48 +14,6 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/54944191e2e2.mp3"
   },
   {
-    "id": "a120",
-    "name": "علي بن أحمد ملا",
-    "region": "الحرمين",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/a3c148ae770f.mp3"
-  },
-  {
-    "id": "a121",
-    "name": "علي بن أحمد ملا",
-    "region": "الحرمين",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/a4ab138564ce.mp3"
-  },
-  {
-    "id": "a122",
-    "name": "علي بن أحمد ملا",
-    "region": "الحرمين",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/77873f64ead9.mp3"
-  },
-  {
-    "id": "a123",
-    "name": "علي بن أحمد ملا",
-    "region": "الحرمين",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/166d1f7c435a.mp3"
-  },
-  {
-    "id": "a124",
-    "name": "علي بن أحمد ملا",
-    "region": "الحرمين",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/3b44ab2cf844.mp3"
-  },
-  {
-    "id": "a125",
-    "name": "علي بن أحمد ملا",
-    "region": "الحرمين",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/e78f06a068fc.mp3"
-  },
-  {
     "id": "a126",
     "name": "محمد خليل رمل",
     "region": "الحرمين",
@@ -105,13 +63,6 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/b30ca9a3e115.mp3"
   },
   {
-    "id": "a231",
-    "name": "الحرم المدني، المدينة النبوية، السعودية",
-    "region": "الحرمين",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/c84496bf1a8c.mp3"
-  },
-  {
     "id": "a232",
     "name": "المسجد الأقصى، القدس، فلسطين",
     "region": "الشام",
@@ -124,13 +75,6 @@
     "region": "الحرمين",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/518b4e081437.mp3"
-  },
-  {
-    "id": "a257",
-    "name": "الحرم المدني، المدينة النبوية، السعودية",
-    "region": "الحرمين",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/efc564e3b1d2.mp3"
   },
   {
     "id": "a3",
@@ -203,13 +147,6 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/6a992c01763d.mp3"
   },
   {
-    "id": "a13",
-    "name": "محمد صلاح الدين كبارة",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/8bd66fa73ff9.mp3"
-  },
-  {
     "id": "a14",
     "name": "عبد المنعم عبد المبدئ",
     "region": "أخرى",
@@ -236,20 +173,6 @@
     "region": "أخرى",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/c81e4e141865.mp3"
-  },
-  {
-    "id": "a18",
-    "name": "ناصر العبيد",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/45299e6a8a68.mp3"
-  },
-  {
-    "id": "a19",
-    "name": "ناصر العبيد",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/e6ced81e9955.mp3"
   },
   {
     "id": "a20",
@@ -315,25 +238,11 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/0dbbe429d7d2.mp3"
   },
   {
-    "id": "a29",
-    "name": "بن سونة",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/ca039c2aa2ca.mp3"
-  },
-  {
     "id": "a30",
     "name": "عبدالرحمن كساب",
     "region": "أخرى",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/2cb233a7a776.mp3"
-  },
-  {
-    "id": "a31",
-    "name": "عبدالرحمن كساب",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/0f9525955696.mp3"
   },
   {
     "id": "a32",
@@ -369,20 +278,6 @@
     "region": "أخرى",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/525b55254e29.mp3"
-  },
-  {
-    "id": "a37",
-    "name": "بديع جادو",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/a88b936d08a9.mp3"
-  },
-  {
-    "id": "a38",
-    "name": "بديع جادو",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/f0c14e23d534.mp3"
   },
   {
     "id": "a39",
@@ -553,13 +448,6 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/229d65e40fdf.mp3"
   },
   {
-    "id": "a64",
-    "name": "محمد الكريني الملوكي",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/061632f7ec55.mp3"
-  },
-  {
     "id": "a65",
     "name": "فواز فرحان الدوماني",
     "region": "أخرى",
@@ -595,20 +483,6 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/ee104f375ae5.mp3"
   },
   {
-    "id": "a70",
-    "name": "عبدالرحمن الأركي",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/f0e3b7062e99.mp3"
-  },
-  {
-    "id": "a71",
-    "name": "عبدالرحمن الأركي",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/06a860dce992.mp3"
-  },
-  {
     "id": "a72",
     "name": "محمد حسين الشهاوي",
     "region": "أخرى",
@@ -628,13 +502,6 @@
     "region": "أخرى",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/dcc77fd7b6a1.mp3"
-  },
-  {
-    "id": "a75",
-    "name": "إبراهيم جبر أبو رحيق",
-    "region": "مصر",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/e37acc95ebe1.mp3"
   },
   {
     "id": "a76",
@@ -658,13 +525,6 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/a07ffd1ae7fe.mp3"
   },
   {
-    "id": "a79",
-    "name": "وليد مهساس",
-    "region": "المغرب العربي",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/c2f99053fed8.mp3"
-  },
-  {
     "id": "a80",
     "name": "أحمد فخرو",
     "region": "الخليج",
@@ -677,41 +537,6 @@
     "region": "أخرى",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/69dbed4439df.mp3"
-  },
-  {
-    "id": "a82",
-    "name": "أحمد الطرابلسي",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/ebfa3977664d.mp3"
-  },
-  {
-    "id": "a83",
-    "name": "أحمد الطرابلسي",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/0ac57c399dc8.mp3"
-  },
-  {
-    "id": "a84",
-    "name": "أحمد الطرابلسي",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/37a192967b75.mp3"
-  },
-  {
-    "id": "a85",
-    "name": "أحمد الطرابلسي",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/9302b5c2153b.mp3"
-  },
-  {
-    "id": "a86",
-    "name": "أحمد الطرابلسي",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/31f4182515ea.mp3"
   },
   {
     "id": "a87",
@@ -733,13 +558,6 @@
     "region": "أخرى",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/e46d891b0acd.mp3"
-  },
-  {
-    "id": "a90",
-    "name": "ياسين العساف",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/b0c404561e49.mp3"
   },
   {
     "id": "a91",
@@ -784,32 +602,11 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/f579c205b4b7.mp3"
   },
   {
-    "id": "a97",
-    "name": "محمد حمود",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/592e8a809f00.mp3"
-  },
-  {
     "id": "a98",
     "name": "محمد ناجى",
     "region": "أخرى",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/1d989d7b7507.mp3"
-  },
-  {
-    "id": "a99",
-    "name": "محمد ناجى",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/08e9c70dc6bc.mp3"
-  },
-  {
-    "id": "a100",
-    "name": "محمد ناجى",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/e028aa90ee1f.mp3"
   },
   {
     "id": "a101",
@@ -847,13 +644,6 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/f477362a775e.mp3"
   },
   {
-    "id": "a106",
-    "name": "إبراهيم جبر",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/671bd7114293.mp3"
-  },
-  {
     "id": "a107",
     "name": "مصطفى وليد",
     "region": "أخرى",
@@ -868,25 +658,11 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/8cac04ba4137.mp3"
   },
   {
-    "id": "a109",
-    "name": "محمود الطوخي",
-    "region": "مصر",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/bdf9f3101b4c.mp3"
-  },
-  {
     "id": "a110",
     "name": "كمال محمد المروش",
     "region": "أخرى",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/faf99a86e98d.mp3"
-  },
-  {
-    "id": "a111",
-    "name": "كمال محمد المروش",
-    "region": "المغرب العربي",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/dedbc7c0f60c.mp3"
   },
   {
     "id": "a112",
@@ -901,13 +677,6 @@
     "region": "أخرى",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/a0d6a4e20bc9.mp3"
-  },
-  {
-    "id": "a114",
-    "name": "أحمد علي",
-    "region": "مصر",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/f77eba62a35f.mp3"
   },
   {
     "id": "a115",
@@ -931,13 +700,6 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/6f509ec934a4.mp3"
   },
   {
-    "id": "a118",
-    "name": "ناصر القطامي",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/d3aa494b7320.mp3"
-  },
-  {
     "id": "a130",
     "name": "مشاري بن راشد العفاسي",
     "region": "الخليج",
@@ -945,74 +707,11 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/b45e93f1efb3.mp3"
   },
   {
-    "id": "a131",
-    "name": "مشاري بن راشد العفاسي",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/e9ab8052fdb8.mp3"
-  },
-  {
-    "id": "a132",
-    "name": "مشاري بن راشد العفاسي",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/ddb21f7363eb.mp3"
-  },
-  {
-    "id": "a133",
-    "name": "مشاري بن راشد العفاسي",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/b91e1c5095cd.mp3"
-  },
-  {
     "id": "a134",
     "name": "عبد الباسط عبد الصمد",
     "region": "مصر",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/1a014366658c.mp3"
-  },
-  {
-    "id": "a135",
-    "name": "عبد الباسط عبد الصمد",
-    "region": "مصر",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/0e56abfb1eb3.mp3"
-  },
-  {
-    "id": "a136",
-    "name": "عبد الباسط عبد الصمد",
-    "region": "مصر",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/566852c1d145.mp3"
-  },
-  {
-    "id": "a137",
-    "name": "عبد الباسط عبد الصمد",
-    "region": "مصر",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/d336be9b95d7.mp3"
-  },
-  {
-    "id": "a138",
-    "name": "عبد الباسط عبد الصمد",
-    "region": "مصر",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/02f1bec971bb.mp3"
-  },
-  {
-    "id": "a139",
-    "name": "عبد الباسط عبد الصمد",
-    "region": "مصر",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/1125f640d83b.mp3"
-  },
-  {
-    "id": "a140",
-    "name": "عبد الباسط عبد الصمد",
-    "region": "مصر",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/4318b757fd42.mp3"
   },
   {
     "id": "a141",
@@ -1029,20 +728,6 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/cdb24a4bd658.mp3"
   },
   {
-    "id": "a143",
-    "name": "محمد صديق المنشاوي",
-    "region": "مصر",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/5771e6a59f2b.mp3"
-  },
-  {
-    "id": "a144",
-    "name": "محمد صديق المنشاوي",
-    "region": "مصر",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/a2b25725149e.mp3"
-  },
-  {
     "id": "a145",
     "name": "ابو العينين شعيشع",
     "region": "مصر",
@@ -1055,13 +740,6 @@
     "region": "مصر",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/97ff79250506.mp3"
-  },
-  {
-    "id": "a147",
-    "name": "أحمد نعينع",
-    "region": "مصر",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/da48b2a26635.mp3"
   },
   {
     "id": "a148",
@@ -1083,20 +761,6 @@
     "region": "الخليج",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/232673ccf543.mp3"
-  },
-  {
-    "id": "a153",
-    "name": "أحمد العمادي",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/3cf9690b4671.mp3"
-  },
-  {
-    "id": "a154",
-    "name": "أحمد العمادي",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/b22e0b06946e.mp3"
   },
   {
     "id": "a155",
@@ -1155,13 +819,6 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/d319fff24477.mp3"
   },
   {
-    "id": "a163",
-    "name": "البهلول أبوعرقوب",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/1077f911aaf9.mp3"
-  },
-  {
     "id": "a164",
     "name": "صهيب هاني خطبا",
     "region": "الشام",
@@ -1174,13 +831,6 @@
     "region": "أخرى",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/e5ed59196ed9.mp3"
-  },
-  {
-    "id": "a166",
-    "name": "أحمد نواف المجلاد",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/5862e9e11c7a.mp3"
   },
   {
     "id": "a167",
@@ -1239,396 +889,11 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/0836cadb51c8.mp3"
   },
   {
-    "id": "a176",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/12bdf614bb9c.mp3"
-  },
-  {
-    "id": "a177",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/0bdf6bc61535.mp3"
-  },
-  {
-    "id": "a178",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/290e489e51f0.mp3"
-  },
-  {
-    "id": "a179",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/cb27ce6f088b.mp3"
-  },
-  {
-    "id": "a180",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/1313c59fc413.mp3"
-  },
-  {
-    "id": "a181",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/4ef9f7f67cbb.mp3"
-  },
-  {
-    "id": "a182",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/265732dc72d0.mp3"
-  },
-  {
-    "id": "a183",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/24eb8a66900b.mp3"
-  },
-  {
-    "id": "a184",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/66d3d6835872.mp3"
-  },
-  {
-    "id": "a185",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/0915980a1ccf.mp3"
-  },
-  {
-    "id": "a186",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/0fc4ebe7f9c8.mp3"
-  },
-  {
-    "id": "a187",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/cc88226bc73b.mp3"
-  },
-  {
-    "id": "a188",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/3c47ccb8602e.mp3"
-  },
-  {
-    "id": "a189",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/9b7c3751ee4d.mp3"
-  },
-  {
-    "id": "a190",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/abf9f5e7c4ea.mp3"
-  },
-  {
-    "id": "a191",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/39fe769b8460.mp3"
-  },
-  {
-    "id": "a192",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/8bc043edea4b.mp3"
-  },
-  {
-    "id": "a193",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/dcee09278f12.mp3"
-  },
-  {
-    "id": "a194",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/3ac08e9c787f.mp3"
-  },
-  {
-    "id": "a195",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/e513e882bb5a.mp3"
-  },
-  {
-    "id": "a196",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/c7e518de7464.mp3"
-  },
-  {
-    "id": "a197",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/9a6885cc1cb2.mp3"
-  },
-  {
-    "id": "a198",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/40ac0f78b53f.mp3"
-  },
-  {
-    "id": "a199",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/78803e70be23.mp3"
-  },
-  {
-    "id": "a200",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/fc8564e0870f.mp3"
-  },
-  {
-    "id": "a201",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/bcae5abbf6a8.mp3"
-  },
-  {
-    "id": "a202",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/7e3e72076c63.mp3"
-  },
-  {
-    "id": "a203",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/ac633f69bb7a.mp3"
-  },
-  {
-    "id": "a204",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/196468fc7d53.mp3"
-  },
-  {
-    "id": "a205",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/a88b261424fe.mp3"
-  },
-  {
-    "id": "a206",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/fda5e242d794.mp3"
-  },
-  {
-    "id": "a207",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/96bf3d0349d2.mp3"
-  },
-  {
-    "id": "a208",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/382e5e9e3d33.mp3"
-  },
-  {
-    "id": "a209",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/a37be4f2207e.mp3"
-  },
-  {
-    "id": "a210",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/18bf7c23142b.mp3"
-  },
-  {
-    "id": "a211",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/617e9c742960.mp3"
-  },
-  {
-    "id": "a212",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/f3143756b914.mp3"
-  },
-  {
-    "id": "a213",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/de35ecd46169.mp3"
-  },
-  {
-    "id": "a214",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/985179409528.mp3"
-  },
-  {
-    "id": "a215",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/7cbbcfeae488.mp3"
-  },
-  {
-    "id": "a216",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/bac9db7c7987.mp3"
-  },
-  {
-    "id": "a217",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/3608cf73a212.mp3"
-  },
-  {
-    "id": "a218",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/65fff653c432.mp3"
-  },
-  {
-    "id": "a219",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/c913c2b7059a.mp3"
-  },
-  {
-    "id": "a220",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/5a20fcd1b095.mp3"
-  },
-  {
-    "id": "a221",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/72b2e4449779.mp3"
-  },
-  {
-    "id": "a222",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/943d1edddb22.mp3"
-  },
-  {
-    "id": "a223",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/fafd3711cb3d.mp3"
-  },
-  {
-    "id": "a224",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/ea0f88528d2b.mp3"
-  },
-  {
-    "id": "a225",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/5828b6ebd365.mp3"
-  },
-  {
-    "id": "a226",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/96482867c965.mp3"
-  },
-  {
-    "id": "a227",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/b4da4bb3d549.mp3"
-  },
-  {
-    "id": "a228",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/edfdbdb8ff73.mp3"
-  },
-  {
-    "id": "a229",
-    "name": "الأذان",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/de8d4ec7c0f3.mp3"
-  },
-  {
     "id": "a233",
     "name": "ماليزيا",
     "region": "أخرى",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/9024ca483958.mp3"
-  },
-  {
-    "id": "a234",
-    "name": "ماليزيا",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/153d445c4ae6.mp3"
   },
   {
     "id": "a235",
@@ -1687,20 +952,6 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/9118dfdd28be.mp3"
   },
   {
-    "id": "a243",
-    "name": "دار السلام، بروناي",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/31a9285c3ca6.mp3"
-  },
-  {
-    "id": "a244",
-    "name": "دار السلام، بروناي",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/2f7c04a67a24.mp3"
-  },
-  {
     "id": "a245",
     "name": "عجمان، الإمارات",
     "region": "الخليج",
@@ -1722,32 +973,11 @@
     "url": "https://media.assabile.com/assabile/adhan_3435370/3073e5ff27a5.mp3"
   },
   {
-    "id": "a248",
-    "name": "تركيا",
-    "region": "أخرى",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/baab3a1b17ef.mp3"
-  },
-  {
     "id": "a249",
     "name": "جامع الراجحي، السعودية",
     "region": "الخليج",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/81c22585afb5.mp3"
-  },
-  {
-    "id": "a250",
-    "name": "جامع الراجحي، السعودية",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/d03e858bb952.mp3"
-  },
-  {
-    "id": "a251",
-    "name": "جامع الراجحي، السعودية",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/101c4a790ab1.mp3"
   },
   {
     "id": "a252",
@@ -1797,19 +1027,5 @@
     "region": "مصر",
     "isFajr": false,
     "url": "https://media.assabile.com/assabile/adhan_3435370/b97727c9dffc.mp3"
-  },
-  {
-    "id": "a261",
-    "name": "الكويت",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/cd03fc75a7f2.mp3"
-  },
-  {
-    "id": "a262",
-    "name": "الكويت",
-    "region": "الخليج",
-    "isFajr": false,
-    "url": "https://media.assabile.com/assabile/adhan_3435370/c6bbb7699f82.mp3"
   }
 ]
