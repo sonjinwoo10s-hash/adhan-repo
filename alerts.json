@@ -2,7 +2,7 @@
   "pre_adhan": [
     {
       "id": "pre_voice_hamed",
-      "name": "تنبيه صوتي (اقتربت صلاة...) - صوت هادئ",
+      "name": "تنبيه الحرم الهادئ (الفجر وباقي الصلوات)",
       "category": "تنبيهات",
       "type": "per_prayer",
       "preview_url": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/pre_adhan_voice/dhuhr.mp3",
