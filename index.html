@@ -1,522 +1,460 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>رفيق المسلم — مصحف المدينة أوفلاين، التلاوات، والأذان</title>
-  <meta name="description" content="تطبيق رفيق المسلم للأندرويد: مصحف المدينة المنورة 604 صفحة بدون إنترنت، تلوين أحكام التجويد، 213 قارئاً، و158 صوت أذان بدون إعلانات.">
-  <meta name="keywords" content="رفيق المسلم, تطبيق رفيق المسلم, مصحف بدون نت, تطبيق قرآن أندرويد, أوقات الصلاة, الأذان">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="رفيق المسلم — القرآن الكريم والأذان">
-  <meta property="og:description" content="مصحف المدينة 604 صفحة بدون نت، تلوين التجويد، 213 قارئاً، و158 مؤذناً في تطبيق واحد مجاني بدون إعلانات.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sonjinwoo10s-hash.github.io/adhan-repo/">
-  <link rel="canonical" href="https://sonjinwoo10s-hash.github.io/adhan-repo/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "رفيق المسلم",
-    "operatingSystem": "ANDROID",
-    "applicationCategory": "LifestyleApplication",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EGP" },
-    "description": "مصحف المدينة المنورة 604 صفحة بدون إنترنت، تلوين التجويد، 213 قارئاً، و158 صوت أذان.",
-    "downloadUrl": "https://github.com/sonjinwoo10s-hash/adhan-repo/releases/latest/download/rafiq-al-muslim.apk"
-  }
-  </script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>رفيق المسلم — تطبيقك اليومي للعبادة والذكر</title>
+  <meta name="description" content="تطبيق رفيق المسلم للأندرويد: مواقيت الصلاة، الأذان، القرآن الكريم، الأذكار، والتنبيهات بدون إنترنت." />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #FAF7F0;
-      --surface: #FFFFFF;
-      --surface-soft: #F3EFE4;
-      --ink: #16211C;
-      --ink-muted: #52615A;
-      --accent: #1B5E43;
-      --accent-dark: #134631;
-      --brass: #A67C37;
-      --border: #E5DFD2;
-      --radius: 14px;
+      --bg: #050b0a;
+      --surface: rgba(16, 36, 32, 0.55);
+      --gold: #eab308;
+      --gold-glow: rgba(234, 179, 8, 0.35);
+      --emerald: #10b981;
+      --text: #f8fafc;
+      --muted: #94a3b8;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'IBM Plex Sans Arabic', -apple-system, sans-serif;
-      background-color: var(--bg);
-      color: var(--ink);
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
+      background: radial-gradient(circle at top center, #0c2620 0%, var(--bg) 65%);
+      color: var(--text);
+      overflow-x: hidden;
+      min-height: 100vh;
     }
+
+    #bg-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
 
     /* Navbar */
-    .nav-wrap {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(250, 247, 240, 0.88);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 14px 20px;
+    nav {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
     }
-    .brand {
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #fde047, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       display: flex;
       align-items: center;
       gap: 10px;
-      text-decoration: none;
-      color: var(--ink);
-      font-weight: 700;
-      font-size: 1.15rem;
     }
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 9px;
-      background: var(--accent);
-      color: #FAF7F0;
-      display: grid;
-      place-items: center;
-      font-family: 'Amiri', serif;
-      font-size: 1.25rem;
+    .nav-badge {
+      font-size: 0.8rem;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #6ee7b7;
     }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--ink-muted);
-      font-size: 0.94rem;
-      font-weight: 500;
-      transition: color 0.15s;
-    }
-    .nav-links a:hover { color: var(--accent); }
-    .nav-cta {
-      background: var(--ink);
-      color: #fff !important;
-      padding: 8px 16px;
-      border-radius: 9px;
-      font-weight: 600 !important;
-    }
-    .nav-cta:hover { background: var(--accent); }
 
-    .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-
-    /* Hero */
+    /* Hero Section */
     .hero {
-      padding: 64px 0 72px;
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 48px;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
       align-items: center;
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.86rem;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-    .eyebrow::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--brass);
+      padding: 40px 0 80px;
     }
     .hero h1 {
-      font-family: 'Amiri', serif;
-      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 900;
       line-height: 1.25;
-      color: var(--ink);
       margin-bottom: 18px;
-      font-weight: 700;
+    }
+    .hero h1 span {
+      background: linear-gradient(90deg, #fde047, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .hero p {
-      font-size: 1.06rem;
-      color: var(--ink-muted);
-      margin-bottom: 28px;
+      font-size: 1.1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 32px;
       max-width: 520px;
     }
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 24px;
-    }
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-      padding: 14px 26px;
-      border-radius: 11px;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: background 0.15s, transform 0.15s;
-    }
-    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      color: var(--ink);
-      text-decoration: none;
-      padding: 13px 22px;
-      border-radius: 11px;
-      border: 1px solid var(--border);
-      font-weight: 600;
-      font-size: 0.96rem;
-      transition: border-color 0.15s, background 0.15s;
-    }
-    .btn-secondary:hover { border-color: var(--ink-muted); background: var(--surface); }
-    .meta-line {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      font-size: 0.85rem;
-      color: var(--ink-muted);
-    }
 
-    /* Handcrafted Phone Mockup */
-    .mockup-wrap {
+    /* Buttons */
+    .cta-group { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+    .btn-download {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 34px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      overflow: hidden;
+    }
+    .btn-download:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 18px 45px rgba(16, 185, 129, 0.55);
+    }
+    .btn-secondary {
+      padding: 15px 26px;
+      border-radius: 16px;
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      backdrop-filter: blur(12px);
+      transition: 0.25s;
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: #fde047; }
+
+    /* 3D Interactive Phone Mockup */
+    .phone-stage {
+      perspective: 1200px;
       display: flex;
       justify-content: center;
+      align-items: center;
     }
-    .phone {
-      width: 295px;
-      background: #1B231F;
-      border-radius: 34px;
-      padding: 11px;
-      box-shadow: 0 28px 60px rgba(22, 33, 28, 0.14), 0 4px 12px rgba(22, 33, 28, 0.06);
+    .phone-3d {
+      width: 285px;
+      height: 550px;
+      border-radius: 42px;
+      background: linear-gradient(160deg, #132a24, #071210);
+      border: 4px solid rgba(234, 179, 8, 0.35);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7), 0 0 40px rgba(16, 185, 129, 0.2);
+      padding: 18px;
+      transform-style: preserve-3d;
+      transition: transform 0.15s ease-out;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .screen {
-      background: #FDF9EE;
+    .phone-notch {
+      width: 110px;
+      height: 22px;
+      background: #030706;
+      border-radius: 0 0 16px 16px;
+      margin: -18px auto 12px;
+    }
+    .phone-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 20px;
+      padding: 16px;
+      text-align: center;
+      transform: translateZ(35px);
+    }
+    .prayer-title { font-size: 0.85rem; color: #6ee7b7; }
+    .prayer-time { font-size: 1.9rem; font-weight: 900; color: #fde047; margin: 4px 0; }
+
+    /* Interactive Tasbih inside 3D Phone */
+    .tasbih-box {
+      transform: translateZ(50px);
+      background: linear-gradient(145deg, rgba(16,185,129,0.18), rgba(234,179,8,0.1));
+      border: 1px solid rgba(234,179,8,0.3);
       border-radius: 24px;
-      overflow: hidden;
-      border: 1px solid #E8DFC8;
-    }
-    .mushaf-top {
-      display: flex;
-      justify-content: space-between;
-      padding: 12px 16px 8px;
-      font-size: 0.72rem;
-      color: #7D6D4F;
-      border-bottom: 1px solid #EFE7D4;
-    }
-    .mushaf-banner {
-      margin: 12px 14px 8px;
-      padding: 6px;
-      text-align: center;
-      border: 1px solid #D9C9A3;
-      border-radius: 8px;
-      background: #F7F0DE;
-      font-family: 'Amiri', serif;
-      font-size: 1rem;
-      color: #1B5E43;
-      font-weight: 700;
-    }
-    .mushaf-body {
-      padding: 8px 16px 14px;
-      font-family: 'Amiri Quran', 'Amiri', serif;
-      font-size: 1.05rem;
-      line-height: 2.15;
-      text-align: justify;
-      color: #1C1A17;
-    }
-    .ayah-hl {
-      background: rgba(27, 94, 67, 0.13);
-      border-radius: 4px;
-      padding: 0 3px;
-    }
-    .tajweed-r { color: #B71C1C; }
-    .tajweed-g { color: #1B5E43; }
-    .ayah-num { color: var(--brass); font-size: 0.9rem; }
-    .player-bar {
-      background: #16211C;
-      color: #FAF7F0;
-      padding: 10px 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.74rem;
-    }
-    .player-speed {
-      background: rgba(255,255,255,0.12);
-      padding: 2px 7px;
-      border-radius: 5px;
-      font-family: monospace;
-    }
-
-    /* Strip */
-    .strip {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 28px 0;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      padding: 20px 14px;
       text-align: center;
     }
-    .strip-item strong {
-      display: block;
-      font-family: 'Amiri', serif;
-      font-size: 1.9rem;
-      color: var(--accent);
-      line-height: 1.2;
-    }
-    .strip-item span { font-size: 0.88rem; color: var(--ink-muted); }
-
-    /* Sections */
-    section.block { padding: 72px 0; }
-    .section-head { max-width: 600px; margin-bottom: 40px; }
-    .section-head h2 {
-      font-family: 'Amiri', serif;
-      font-size: 2rem;
-      margin-bottom: 10px;
-      color: var(--ink);
-    }
-    .section-head p { color: var(--ink-muted); font-size: 0.98rem; }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-    .feature-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-    }
-    .icon-box {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      background: var(--surface-soft);
-      color: var(--accent);
-      display: grid;
-      place-items: center;
-      margin-bottom: 18px;
-    }
-    .feature-card h3 {
-      font-size: 1.12rem;
-      margin-bottom: 8px;
-      color: var(--ink);
-    }
-    .feature-card p {
-      font-size: 0.94rem;
-      color: var(--ink-muted);
-    }
-
-    /* FAQ */
-    .faq-list { display: grid; gap: 12px; max-width: 780px; }
-    details {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px 20px;
-    }
-    summary {
-      font-weight: 600;
+    .tasbih-btn {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      border: 3px solid #fde047;
+      background: radial-gradient(circle, #10b981, #047857);
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 900;
       cursor: pointer;
-      list-style: none;
+      margin: 12px auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      color: var(--ink);
+      justify-content: center;
+      box-shadow: 0 0 25px rgba(16,185,129,0.5);
+      transition: transform 0.1s ease;
+      user-select: none;
     }
-    summary::after { content: "+"; font-size: 1.2rem; color: var(--accent); }
-    details[open] summary::after { content: "−"; }
-    details p {
-      margin-top: 10px;
-      font-size: 0.93rem;
-      color: var(--ink-muted);
+    .tasbih-btn:active { transform: scale(0.92); }
+    .tasbih-reset {
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 0.8rem;
+      cursor: pointer;
+      text-decoration: underline;
     }
 
-    /* Footer */
+    /* 3D Tilt Feature Cards */
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 45px;
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      padding-bottom: 80px;
+      perspective: 1200px;
+    }
+    .tilt-card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 28px 24px;
+      backdrop-filter: blur(16px);
+      transform-style: preserve-3d;
+      transition: transform 0.15s ease-out, border-color 0.3s;
+      overflow: hidden;
+    }
+    .tilt-card:hover { border-color: rgba(234, 179, 8, 0.45); }
+    .tilt-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(300px circle at var(--x, 50%) var(--y, 50%), rgba(234, 179, 8, 0.16), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .tilt-card:hover::before { opacity: 1; }
+    .card-icon {
+      font-size: 2.2rem;
+      margin-bottom: 14px;
+      display: inline-block;
+      transform: translateZ(30px);
+    }
+    .tilt-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: #fde047;
+      transform: translateZ(25px);
+    }
+    .tilt-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.95rem;
+      transform: translateZ(15px);
+    }
+
+    /* Toast */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #065f46;
+      border: 1px solid #10b981;
+      color: #fff;
+      padding: 14px 26px;
+      border-radius: 14px;
+      font-weight: 700;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      z-index: 999;
+    }
+    #toast.show { transform: translateX(-50%) translateY(0); }
+
     footer {
-      border-top: 1px solid var(--border);
-      padding: 36px 0;
-      margin-top: 40px;
-      font-size: 0.88rem;
-      color: var(--ink-muted);
-    }
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 14px;
+      text-align: center;
+      padding: 28px 0;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
-    @media (max-width: 820px) {
-      .hero { grid-template-columns: 1fr; padding: 40px 0 48px; gap: 36px; }
-      .nav-links a:not(.nav-cta) { display: none; }
-      .strip { grid-template-columns: repeat(2, 1fr); }
-      .features-grid { grid-template-columns: 1fr; }
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; text-align: center; padding-top: 20px; }
+      .hero p { margin: 0 auto 28px; }
+      .cta-group { justify-content: center; }
+      .phone-3d { height: 500px; }
     }
   </style>
 </head>
 <body>
+  <canvas id="bg-canvas"></canvas>
 
-  <div class="nav-wrap">
-    <nav class="nav">
-      <a href="#" class="brand">
-        <span class="brand-mark">ر</span>
-        <span>رفيق المسلم</span>
-      </a>
-      <div class="nav-links">
-        <a href="#features">المميزات</a>
-        <a href="#faq">الأسئلة الشائعة</a>
-        <a href="https://github.com/sonjinwoo10s-hash/adhan-repo/releases/latest/download/rafiq-al-muslim.apk" class="nav-cta">تحميل التطبيق</a>
-      </div>
+  <div class="container">
+    <nav>
+      <div class="logo">🕌 رفيق المسلم</div>
+      <div class="nav-badge">أحدث إصدار متاح تلقائياً</div>
     </nav>
+
+    <section class="hero">
+      <div>
+        <h1>رفيقك اليومي <span>للصلاة والذكر</span> بتجربة سلسة بدون إنترنت</h1>
+        <p>مواقيت صلاة دقيقة حسب موقعك، أذان بأعذب الأصوات، أذكار الصباح والمساء، ومصحف وتفسير يعملون بكفاءة كاملة حتى بدون اتصال بالإنترنت.</p>
+        <div class="cta-group">
+          <a id="downloadBtn" class="btn-download" href="https://github.com/sonjinwoo10s-hash/-/releases/latest/download/rafiq-al-muslim.apk" download="rafiq-al-muslim.apk">
+            ⬇️ تحميل التطبيق (APK)
+          </a>
+          <a class="btn-secondary" href="#features">استكشف المميزات</a>
+        </div>
+      </div>
+
+      <div class="phone-stage">
+        <div class="phone-3d" id="phone3d">
+          <div>
+            <div class="phone-notch"></div>
+            <div class="phone-card">
+              <div class="prayer-title">تجربة حية من التطبيق</div>
+              <div class="prayer-time" id="liveClock">--:--</div>
+              <div style="font-size:0.8rem; color:#94a3b8;">مواقيت دقيقة • أذان تلقائي</div>
+            </div>
+          </div>
+
+          <div class="tasbih-box">
+            <div style="font-size:0.9rem; color:#fde047; font-weight:700;">جرّب السبحة التفاعلية</div>
+            <div style="font-size:0.8rem; color:#cbd5e1;" id="zekrText">سبحان الله</div>
+            <button class="tasbih-btn" id="tasbihBtn">0</button>
+            <button class="tasbih-reset" id="resetBtn">تصفير العداد</button>
+          </div>
+
+          <div style="text-align:center; font-size:0.75rem; color:#64748b;">حرّك الماوس أو المس الشاشة للتفاعل 3D</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2 class="section-title">مميزات تطبيق رفيق المسلم</h2>
+      <p class="section-sub">مصمم بعناية ليجمع كل ما يحتاجه المسلم في مكان واحد بسرعة وخفة</p>
+
+      <div class="cards-grid">
+        <div class="tilt-card">
+          <span class="card-icon">🕌</span>
+          <h3>مواقيت الصلاة والأذان</h3>
+          <p>تحديد تلقائي لموقعك مع تنبيهات قبل الأذان واختيار المؤذن المفضل لديك بدقة عالية.</p>
+        </div>
+        <div class="tilt-card">
+          <span class="card-icon">📖</span>
+          <h3>القرآن والتفسير أوفلاين</h3>
+          <p>تصفح وقراءة مريحة للعين مع إمكانية تحميل التفسير والأحاديث للعمل بدون إنترنت تماماً.</p>
+        </div>
+        <div class="tilt-card">
+          <span class="card-icon">📊</span>
+          <h3>متابعة الصلوات والقضاء</h3>
+          <p>سجل يومي للصلوات والسنن مع حفظ تلقائي لبياناتك عبر نسخ أندرويد الاحتياطي.</p>
+        </div>
+        <div class="tilt-card">
+          <span class="card-icon">⚡</span>
+          <h3>سريع وخفيف ومجاني</h3>
+          <p>أداء سلس بدون إعلانات مزعجة، مع ويدجت للشاشة الرئيسية وتحديثات مستمرة تلقائياً.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 تطبيق رفيق المسلم — جميع الحقوق محفوظة
+    </footer>
   </div>
 
-  <main class="container">
-    <header class="hero">
-      <div>
-        <div class="eyebrow">إصدار الأندرويد • مجاني وبدون إعلانات</div>
-        <h1>مصحفك اليومي، وتنبيهات صلاتك في مكان واحد هادئ.</h1>
-        <p>
-          صُمم تطبيق <strong>رفيق المسلم</strong> ليكون خفيفاً وسريعاً وبعيداً عن التشتيت. اقرأ مصحف المدينة المنورة كاملاً بدون إنترنت، استمع لأكثر من 213 قارئاً، واضبط الأذان بصوت مؤذنك المفضل.
-        </p>
-        <div class="hero-actions">
-          <a class="btn-primary" href="https://github.com/sonjinwoo10s-hash/adhan-repo/releases/latest/download/rafiq-al-muslim.apk">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            تحميل للأندرويد (APK)
-          </a>
-          <a class="btn-secondary" href="#features">استعراض المميزات</a>
-        </div>
-        <div class="meta-line">
-          <span>يعمل على أندرويد 8.0 فأحدث</span>
-          <span>•</span>
-          <span>المصحف أوفلاين 100%</span>
-          <span>•</span>
-          <span>صدقة جارية</span>
-        </div>
-      </div>
+  <div id="toast">✅ بدأ تحميل أحدث إصدار من رفيق المسلم...</div>
 
-      <div class="mockup-wrap" aria-hidden="true">
-        <div class="phone">
-          <div class="screen">
-            <div class="mushaf-top">
-              <span>سورة الفاتحة</span>
-              <span>الجزء ١</span>
-            </div>
-            <div class="mushaf-banner">سُورَةُ الفَاتِحَةِ</div>
-            <div class="mushaf-body">
-              بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ <span class="ayah-num">﴿١﴾</span>
-              <span class="ayah-hl">ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ</span> <span class="ayah-num">﴿٢﴾</span>
-              ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ <span class="ayah-num">﴿٣﴾</span>
-              مَـٰلِكِ يَوْمِ ٱلدِّينِ <span class="ayah-num">﴿٤﴾</span>
-              إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ <span class="ayah-num">﴿٥﴾</span>
-              ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ <span class="ayah-num">﴿٦﴾</span>
-              صِرَٰطَ ٱلَّذِينَ أَ<span class="tajweed-g">نْ</span>عَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّ<span class="tajweed-r">آ</span>لِّينَ <span class="ayah-num">﴿٧﴾</span>
-            </div>
-            <div class="player-bar">
-              <span>ماهر المعيقلي — حفص</span>
-              <span class="player-speed">1.0x</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+  <script>
+    // 1. Live Clock inside 3D Phone
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('liveClock').textContent =
+        now.toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
 
-    <div class="strip">
-      <div class="strip-item"><strong>604</strong><span>صفحة مصحف أوفلاين</span></div>
-      <div class="strip-item"><strong>213</strong><span>قارئ بمصحف كامل</span></div>
-      <div class="strip-item"><strong>158</strong><span>صوت أذان مصنّف</span></div>
-      <div class="strip-item"><strong>0</strong><span>إعلانات أو تتبّع</span></div>
-    </div>
+    // 2. Interactive Tasbih
+    let count = 0;
+    const azkar = ['سبحان الله', 'الحمد لله', 'الله أكبر', 'لا إله إلا الله'];
+    const tasbihBtn = document.getElementById('tasbihBtn');
+    const zekrText = document.getElementById('zekrText');
+    tasbihBtn.addEventListener('click', () => {
+      count++;
+      tasbihBtn.textContent = count;
+      zekrText.textContent = azkar[Math.floor((count - 1) / 33) % azkar.length];
+      if (navigator.vibrate) navigator.vibrate(15);
+    });
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      count = 0;
+      tasbihBtn.textContent = '0';
+      zekrText.textContent = azkar[0];
+    });
 
-    <section id="features" class="block">
-      <div class="section-head">
-        <h2>كل ما تحتاجه في يومك، بلا تعقيد</h2>
-        <p>اهتممنا بأدق التفاصيل في القراءة والاستماع والتنبيهات ليعمل التطبيق بسلاسة حتى على الأجهزة المتوسطة.</p>
-      </div>
+    // 3. Download Toast
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3500);
+    });
 
-      <div class="features-grid">
-        <article class="feature-card">
-          <div class="icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-          </div>
-          <h3>مصحف المدينة المنورة أوفلاين</h3>
-          <p>تصفح الـ 604 صفحة بنفس تنسيق المصحف الورقي مع تقليب سلس للصفحات، وضع ليلي مريح للعين، وعلامات مرجعية تحفظ موضع ختمتك.</p>
-        </article>
+    // 4. 3D Tilt Effect for Cards & Phone
+    function attachTilt(el, maxTilt) {
+      el.addEventListener('mousemove', (e) => {
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const rotateY = ((x / rect.width) - 0.5) * maxTilt * 2;
+        const rotateX = ((0.5 - (y / rect.height))) * maxTilt * 2;
+        el.style.setProperty('--x', x + 'px');
+        el.style.setProperty('--y', y + 'px');
+        el.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+      });
+    }
+    attachTilt(document.getElementById('phone3d'), 14);
+    document.querySelectorAll('.tilt-card').forEach(card => attachTilt(card, 10));
 
-        <article class="feature-card">
-          <div class="icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          </div>
-          <h3>تلوين التجويد ودليل النطق</h3>
-          <p>مفتاح فوري لإظهار أو إخفاء ألوان أحكام التجويد (المدود، الغنة، الإخفاء، القلقلة) مع دليل مبسط وأمثلة قرآنية تساعدك على تصحيح التلاوة.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
-          </div>
-          <h3>مشغل تلاوات ذكي مع التظليل</h3>
-          <p>تظليل متزامن للآية والكلمات أثناء قراءة الشيخ، تقليب تلقائي للصفحات، وتحكم مرن في سرعة التلاوة من 0.5x حتى 2.0x.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-          </div>
-          <h3>مكتبة أذان شاملة وتعمل أوفلاين</h3>
-          <p>اختر من بين 158 مؤذناً من الحرمين الشريفين ومصر والخليج والشام، واحفظ صوتك المفضل على الجهاز ليعمل الأذان في موعده بدون إنترنت.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="faq" class="block" style="padding-top: 20px;">
-      <div class="section-head">
-        <h2>أسئلة شائعة</h2>
-      </div>
-      <div class="faq-list">
-        <details>
-          <summary>هل يعمل المصحف بدون إنترنت بالكامل؟</summary>
-          <p>نعم، نص المصحف الشريف بجميع صفحاته الـ 604 يعمل أوفلاين بالكامل دون الحاجة للاتصال بالإنترنت. الاتصال مطلوب فقط عند الاستماع للتلاوات الصوتية أو تحديث قائمة القراء والمؤذنين.</p>
-        </details>
-        <details>
-          <summary>هل التطبيق مجاني تماماً؟ وهل يحتوي على إعلانات؟</summary>
-          <p>التطبيق مجاني 100% وخالٍ تماماً من أي إعلانات مزعجة أو اشتراكات، وهو صدقة جارية.</p>
-        </details>
-        <details>
-          <summary>كيف أضمن عمل الأذان في وقته والشاشة مغلقة؟</summary>
-          <p>من داخل إعدادات التطبيق، قم بتحميل صوت المؤذن الذي تفضله للعمل أوفلاين، وفعّل إذن المنبهات الدقيقة وتجاهل تحسين البطارية ليصل التنبيه في موعده بدقة.</p>
-        </details>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <span>© 2026 تطبيق رفيق المسلم — صدقة جارية، نسألكم صالح الدعاء.</span>
-      <a href="https://github.com/sonjinwoo10s-hash/adhan-repo/releases/latest/download/rafiq-al-muslim.apk" style="color: var(--accent); text-decoration: none; font-weight: 600;">آخر إصدار للتحميل</a>
-    </div>
-  </footer>
-
+    // 5. Lightweight Interactive Starry Background
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      stars = Array.from({ length: 65 }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 1.8 + 0.4,
+        dy: Math.random() * 0.35 + 0.1
+      }));
+    }
+    window.addEventListener('resize', resize);
+    resize();
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(253, 224, 71, 0.55)';
+      stars.forEach(s => {
+        s.y -= s.dy;
+        if (s.y < 0) { s.y = canvas.height; s.x = Math.random() * canvas.width; }
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
 </body>
 </html>
