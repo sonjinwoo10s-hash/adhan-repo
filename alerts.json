@@ -1,0 +1,72 @@
+{
+  "pre_adhan": [
+    {
+      "id": "pre_afasy",
+      "name": "مشاري العفاسي - تنبيه الصلاة",
+      "category": "قراء مشهورين",
+      "url": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/pre_adhan/pre_afasy.mp3"
+    },
+    {
+      "id": "pre_naqshbandi",
+      "name": "الشيخ النقشبندي - ابتهال قصير",
+      "category": "مصر",
+      "url": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/pre_adhan/pre_naqshbandi.mp3"
+    },
+    {
+      "id": "pre_maher",
+      "name": "ماهر المعيقلي - تنبيه الصلاة",
+      "category": "الحرمين",
+      "url": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/pre_adhan/pre_maher.mp3"
+    },
+    {
+      "id": "pre_dosari",
+      "name": "ياسر الدوسري - حيّ على الصلاة",
+      "category": "الحرمين",
+      "url": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/pre_adhan/pre_dosari.mp3"
+    },
+    {
+      "id": "pre_minshawi",
+      "name": "محمد صديق المنشاوي - تنبيه",
+      "category": "مصر",
+      "url": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/pre_adhan/pre_minshawi.mp3"
+    }
+  ],
+  "iqama": [
+    {
+      "id": "iqama_makkah",
+      "name": "إقامة الحرم المكي - علي ملا",
+      "category": "الحرمين",
+      "url": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/iqama/iqama_makkah.mp3"
+    },
+    {
+      "id": "iqama_madinah",
+      "name": "إقامة المسجد النبوي",
+      "category": "الحرمين",
+      "url": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/iqama/iqama_madinah.mp3"
+    },
+    {
+      "id": "iqama_afasy",
+      "name": "مشاري العفاسي - الإقامة",
+      "category": "قراء مشهورين",
+      "url": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/iqama/iqama_afasy.mp3"
+    },
+    {
+      "id": "iqama_abdulbasit",
+      "name": "عبد الباسط عبد الصمد - الإقامة",
+      "category": "مصر",
+      "url": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/iqama/iqama_abdulbasit.mp3"
+    },
+    {
+      "id": "iqama_refaat",
+      "name": "الشيخ محمد رفعت - الإقامة",
+      "category": "مصر",
+      "url": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/iqama/iqama_refaat.mp3"
+    },
+    {
+      "id": "iqama_tobar",
+      "name": "نصر الدين طوبار - الإقامة",
+      "category": "مصر",
+      "url": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/iqama/iqama_tobar.mp3"
+    }
+  ]
+}
