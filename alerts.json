@@ -1,6 +1,20 @@
 {
   "pre_adhan": [
     {
+      "id": "pre_voice_hamed",
+      "name": "تنبيه صوتي (اقتربت صلاة...) - صوت هادئ",
+      "category": "تنبيهات",
+      "type": "per_prayer",
+      "preview_url": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/pre_adhan_voice/dhuhr.mp3",
+      "urls": {
+        "fajr": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/pre_adhan_voice/fajr.mp3",
+        "dhuhr": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/pre_adhan_voice/dhuhr.mp3",
+        "asr": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/pre_adhan_voice/asr.mp3",
+        "maghrib": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/pre_adhan_voice/maghrib.mp3",
+        "isha": "https://raw.githubusercontent.com/sonjinwoo10s-hash/adhan-repo/main/alerts/pre_adhan_voice/isha.mp3"
+      }
+    },
+    {
       "id": "pre_afasy",
       "name": "مشاري العفاسي - تنبيه الصلاة",
       "category": "قراء مشهورين",
