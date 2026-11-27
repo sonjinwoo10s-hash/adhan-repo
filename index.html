@@ -501,7 +501,7 @@
         <div class="nav-links">
           <a href="#features">المميزات</a>
           <a href="#install">طريقة التثبيت</a>
-          <a class="nav-cta dl-trigger" href="https://github.com/sonjinwoo10s-hash/-/releases/latest/download/rafiq-al-muslim.apk" download="rafiq-al-muslim.apk">تحميل الآن</a>
+          <a class="nav-cta" href="https://github.com/sonjinwoo10s-hash/-/releases/latest/download/rafiq-al-muslim.apk" download="rafiq-al-muslim.apk">تحميل الآن</a>
         </div>
       </nav>
     </header>
@@ -601,7 +601,20 @@
       </div>
     </section>
 
-    <section id="install" class="reveal">
+    <section id="screenshots" class="reveal">
+  <div class="section-head">
+    <span class="pill">شكل التطبيق</span>
+    <h2>لقطات من داخل التطبيق</h2>
+  </div>
+  <div class="shots-track">
+    <div class="shot-card tilt-el"><img src="screenshots/1.png" alt="لقطة من التطبيق - مواقيت الصلاة"></div>
+    <div class="shot-card tilt-el"><img src="screenshots/2.png" alt="لقطة من التطبيق - القرآن الكريم"></div>
+    <div class="shot-card tilt-el"><img src="screenshots/3.png" alt="لقطة من التطبيق - الأذكار"></div>
+    <div class="shot-card tilt-el"><img src="screenshots/4.png" alt="لقطة من التطبيق - الإعدادات"></div>
+  </div>
+</section>
+
+<section id="install" class="reveal">
       <div class="section-head">
         <span class="pill">تثبيت في ثوانٍ</span>
         <h2>طريقة التثبيت على الأندرويد</h2>
@@ -625,124 +638,7 @@
       </div>
     </section>
 
-    <footer>
-      © 2026 تطبيق رفيق المسلم — صُمم بحب ليكون رفيقك في كل صلاة وذكر
-    </footer>
-  </div>
-
-  <div id="lightbox">
-    <button id="lightbox-close" aria-label="إغلاق">✕</button>
-    <img id="lightbox-img" src="" alt="عرض الصورة">
-  </div>
-  <div id="toast">✅ بدأ تحميل أحدث إصدار من رفيق المسلم...</div>
-
-  <script>
-    // Clock & Hijri Date
-    function updateTime() {
-      const now = new Date();
-      document.getElementById('liveClock').textContent =
-        now.toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
-      try {
-        document.getElementById('hijriDate').textContent =
-          new Intl.DateTimeFormat('ar-SA-u-ca-islamic', { day: 'numeric', month: 'long', year: 'numeric' }).format(now);
-      } catch {
-        document.getElementById('hijriDate').textContent = now.toLocaleDateString('ar-EG');
-      }
-    }
-    updateTime();
-    setInterval(updateTime, 1000);
-
-    // Interactive Tasbih with 33-step Progress Ring
-    let count = 0, zIdx = 0;
-    const azkar = ['سبحان الله', 'الحمد لله', 'الله أكبر', 'أستغفر الله', 'لا إله إلا الله'];
-    const ringFg = document.getElementById('ringFg');
-    const countEl = document.getElementById('tasbihCount');
-    const zekrEl = document.getElementById('zekrText');
-    const circ = 295;
-
-    function renderTasbih() {
-      countEl.textContent = count;
-      zekrEl.textContent = azkar[zIdx];
-      const progress = (count % 33) / 33;
-      ringFg.style.strokeDashoffset = circ - (progress === 0 && count > 0 ? 1 : progress) * circ;
-    }
-    document.getElementById('tasbihBtn').addEventListener('click', () => {
-      count++;
-      if (count % 33 === 0) { zIdx = (zIdx + 1) % azkar.length; if (navigator.vibrate) navigator.vibrate([25, 40, 25]); }
-      else if (navigator.vibrate) navigator.vibrate(12);
-      renderTasbih();
-    });
-    document.getElementById('nextZekr').addEventListener('click', () => { zIdx = (zIdx + 1) % azkar.length; renderTasbih(); });
-    document.getElementById('resetBtn').addEventListener('click', () => { count = 0; renderTasbih(); });
-
-    // Download Toast
-    document.querySelectorAll('.dl-trigger').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const t = document.getElementById('toast');
-        t.classList.add('show');
-        setTimeout(() => t.classList.remove('show'), 3600);
-      });
-    });
-
-    // 3D Tilt + Spotlight
-    document.querySelectorAll('.tilt-el').forEach(el => {
-      const maxTilt = el.id === 'phone3d' ? 14 : 9;
-      el.addEventListener('mousemove', e => {
-        const r = el.getBoundingClientRect();
-        const x = e.clientX - r.left, y = e.clientY - r.top;
-        el.style.setProperty('--x', x + 'px');
-        el.style.setProperty('--y', y + 'px');
-        const ry = ((x / r.width) - 0.5) * maxTilt * 2;
-        const rx = (0.5 - (y / r.height)) * maxTilt * 2;
-        el.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) scale(1.02)`;
-      });
-      el.addEventListener('mouseleave', () => {
-        el.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
-      });
-    });
-
-    // Lightbox for Screenshots
-    document.querySelectorAll('.shot-card').forEach(card => {
-      card.addEventListener('click', () => {
-        document.getElementById('lightbox-img').src = card.querySelector('img').src;
-        document.getElementById('lightbox').classList.add('open');
-      });
-    });
-    document.getElementById('lightbox').addEventListener('click', e => {
-      if (e.target.id === 'lightbox' || e.target.id === 'lightbox-close')
-        document.getElementById('lightbox').classList.remove('open');
-    });
-
-    // Scroll Reveal
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(en => { if (en.isIntersecting) en.target.classList.add('visible'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // Golden Dust Stars Canvas
-    const c = document.getElementById('stars'), ctx = c.getContext('2d');
-    let pts = [];
-    function resize() {
-      c.width = innerWidth; c.height = innerHeight;
-      pts = Array.from({ length: 70 }, () => ({
-        x: Math.random() * c.width, y: Math.random() * c.height,
-        r: Math.random() * 1.7 + 0.3, s: Math.random() * 0.35 + 0.08
-      }));
-    }
-    addEventListener('resize', resize); resize();
-    (function loop() {
-      ctx.clearRect(0, 0, c.width, c.height);
-      ctx.fillStyle = 'rgba(253, 224, 71, 0.5)';
-      pts.forEach(p => {
-        p.y -= p.s;
-        if (p.y < 0) { p.y = c.height; p.x = Math.random() * c.width; }
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
-      });
-      requestAnimationFrame(loop);
-    })();
-  </script>
-
-<!-- Windows Desktop Version Section -->
+    <!-- Windows Desktop Version Section -->
 <section id="windows-download" dir="rtl" style="max-width:820px;margin:32px auto;padding:24px;border-radius:18px;background:linear-gradient(135deg,#0b2e23,#124736);color:#f5f5f5;border:1px solid rgba(212,175,55,0.4);font-family:'Segoe UI',Tahoma,sans-serif;box-shadow:0 10px 28px rgba(0,0,0,0.3);">
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px;">
     <h2 style="margin:0;color:#e5c158;font-size:1.45rem;">💻 نسخة الويندوز (Windows 10 / 11)</h2>
@@ -806,11 +702,134 @@
     </div>
   </div>
 
-  <a href="https://github.com/sonjinwoo10s-hash/rafiq-al-muslim-windows/releases/latest/download/RafiqAlMuslim-Setup.msi"
+  <a href="https://github.com/sonjinwoo10s-hash/rafiq-al-muslim-windows/releases/latest/download/RafiqAlMuslim-Setup.msi" onclick="showToast()"
      style="display:inline-block;background:#d4af37;color:#071310;text-decoration:none;font-weight:700;padding:12px 26px;border-radius:12px;font-size:1.02rem;">
      ⬇ تحميل رفيق المسلم للويندوز (.msi)
   </a>
 </section>
+
+<footer>
+      © 2026 تطبيق رفيق المسلم — صُمم بحب ليكون رفيقك في كل صلاة وذكر
+    </footer>
+  </div>
+
+  <div id="lightbox">
+    <button id="lightbox-close" aria-label="إغلاق">✕</button>
+    <img id="lightbox-img" src="" alt="عرض الصورة">
+  </div>
+  <div id="toast">✅ بدأ تحميل أحدث إصدار من رفيق المسلم...</div>
+
+  <script>
+    // Clock & Hijri Date
+    function updateTime() {
+      const now = new Date();
+      document.getElementById('liveClock').textContent =
+        now.toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
+      try {
+        document.getElementById('hijriDate').textContent =
+          new Intl.DateTimeFormat('ar-SA-u-ca-islamic', { day: 'numeric', month: 'long', year: 'numeric' }).format(now);
+      } catch {
+        document.getElementById('hijriDate').textContent = now.toLocaleDateString('ar-EG');
+      }
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+
+    // Interactive Tasbih with 33-step Progress Ring
+    let count = 0, zIdx = 0;
+    const azkar = ['سبحان الله', 'الحمد لله', 'الله أكبر', 'أستغفر الله', 'لا إله إلا الله'];
+    const ringFg = document.getElementById('ringFg');
+    const countEl = document.getElementById('tasbihCount');
+    const zekrEl = document.getElementById('zekrText');
+    const circ = 295;
+
+    function renderTasbih() {
+      countEl.textContent = count;
+      zekrEl.textContent = azkar[zIdx];
+      const progress = (count % 33) / 33;
+      ringFg.style.strokeDashoffset = circ - (progress === 0 && count > 0 ? 1 : progress) * circ;
+    }
+    document.getElementById('tasbihBtn').addEventListener('click', () => {
+      count++;
+      if (count % 33 === 0) { zIdx = (zIdx + 1) % azkar.length; if (navigator.vibrate) navigator.vibrate([25, 40, 25]); }
+      else if (navigator.vibrate) navigator.vibrate(12);
+      renderTasbih();
+    });
+    document.getElementById('nextZekr').addEventListener('click', () => { zIdx = (zIdx + 1) % azkar.length; renderTasbih(); });
+    document.getElementById('resetBtn').addEventListener('click', () => { count = 0; renderTasbih(); });
+
+    // Download Toast - يظهر فقط عند بدء تحميل حقيقي
+function showToast() {
+  const t = document.getElementById('toast');
+  if (!t) return;
+  t.classList.add('show');
+  clearTimeout(t._hideTimer);
+  t._hideTimer = setTimeout(() => t.classList.remove('show'), 3600);
+}
+document.querySelectorAll('.dl-trigger').forEach(btn => {
+  btn.addEventListener('click', showToast);
+});
+    });
+
+    // 3D Tilt + Spotlight
+    document.querySelectorAll('.tilt-el').forEach(el => {
+      const maxTilt = el.id === 'phone3d' ? 14 : 9;
+      el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        const x = e.clientX - r.left, y = e.clientY - r.top;
+        el.style.setProperty('--x', x + 'px');
+        el.style.setProperty('--y', y + 'px');
+        const ry = ((x / r.width) - 0.5) * maxTilt * 2;
+        const rx = (0.5 - (y / r.height)) * maxTilt * 2;
+        el.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) scale(1.02)`;
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+      });
+    });
+
+    // Lightbox for Screenshots
+    document.querySelectorAll('.shot-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.getElementById('lightbox-img').src = card.querySelector('img').src;
+        document.getElementById('lightbox').classList.add('open');
+      });
+    });
+    document.getElementById('lightbox').addEventListener('click', e => {
+      if (e.target.id === 'lightbox' || e.target.id === 'lightbox-close')
+        document.getElementById('lightbox').classList.remove('open');
+    });
+
+    // Scroll Reveal
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) en.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Golden Dust Stars Canvas
+    const c = document.getElementById('stars'), ctx = c.getContext('2d');
+    let pts = [];
+    function resize() {
+      c.width = innerWidth; c.height = innerHeight;
+      pts = Array.from({ length: 70 }, () => ({
+        x: Math.random() * c.width, y: Math.random() * c.height,
+        r: Math.random() * 1.7 + 0.3, s: Math.random() * 0.35 + 0.08
+      }));
+    }
+    addEventListener('resize', resize); resize();
+    (function loop() {
+      ctx.clearRect(0, 0, c.width, c.height);
+      ctx.fillStyle = 'rgba(253, 224, 71, 0.5)';
+      pts.forEach(p => {
+        p.y -= p.s;
+        if (p.y < 0) { p.y = c.height; p.x = Math.random() * c.width; }
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+      });
+      requestAnimationFrame(loop);
+    })();
+  </script>
+
+
 
 
 <!-- Smart Download Modals -->
@@ -938,7 +957,7 @@
 
     <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:10px;">
       <span style="font-size:0.85rem; color:#a7c9be;">لم يبدأ التحميل تلقائياً؟</span>
-      <a href="https://github.com/sonjinwoo10s-hash/rafiq-al-muslim-windows/releases/latest/download/RafiqAlMuslim-Setup.msi" class="rm-win-hero-btn">
+      <a href="https://github.com/sonjinwoo10s-hash/rafiq-al-muslim-windows/releases/latest/download/RafiqAlMuslim-Setup.msi" onclick="showToast()" class="rm-win-hero-btn">
         ⬇ اضغط هنا لإعادة التحميل
       </a>
     </div>
@@ -963,6 +982,7 @@
       document.body.appendChild(a);
       a.click();
       a.remove();
+      showToast();
     }, 350);
   }
 
@@ -987,7 +1007,7 @@
     const chooseAndroidEl = document.getElementById("rm-choose-android");
     if (chooseAndroidEl) {
       chooseAndroidEl.href = androidHref;
-      chooseAndroidEl.addEventListener("click", rmCloseAll);
+      chooseAndroidEl.addEventListener("click", () => { rmCloseAll(); showToast(); });
     }
 
     // 2. ربط زر "تحميل الآن" العلوي بنافذة الاختيار
