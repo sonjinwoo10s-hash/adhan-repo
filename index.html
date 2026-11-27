@@ -601,19 +601,33 @@
       </div>
     </section>
 
-    <section id="screenshots" class="reveal">
-  <div class="section-head">
+    
+<style>
+  #screenshots { max-width: 1100px; margin: 48px auto; padding: 0 20px; direction: rtl; }
+  #screenshots .rm-shots-track {
+    display: flex; gap: 16px; overflow-x: auto; padding: 12px 4px 20px;
+    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+  }
+  #screenshots .rm-shot-card {
+    flex: 0 0 320px; border-radius: 16px; overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.35); background: #071c15;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35); scroll-snap-align: center;
+  }
+  #screenshots .rm-shot-card img { width: 100%; height: auto; display: block; }
+</style>
+<section id="screenshots">
+  <div class="section-head" style="text-align:center; margin-bottom:20px;">
     <span class="pill">شكل التطبيق</span>
     <h2>لقطات من داخل التطبيق</h2>
   </div>
-  <div class="shots-track">
-    <div class="shot-card tilt-el"><img src="screenshots/1.jpg" alt="لقطة من التطبيق - مواقيت الصلاة"></div>
-    <div class="shot-card tilt-el"><img src="screenshots/2.jpg" alt="لقطة من التطبيق - المصحف الشريف"></div>
-    <div class="shot-card tilt-el"><img src="screenshots/3.jpg" alt="لقطة من التطبيق - مكتبة قراء القرآن الكريم"></div>
-    <div class="shot-card tilt-el"><img src="screenshots/4.jpg" alt="لقطة من التطبيق - الأذكار والأدعية"></div>
-    <div class="shot-card tilt-el"><img src="screenshots/5.jpg" alt="لقطة من التطبيق - السبحة الإلكترونية"></div>
-    <div class="shot-card tilt-el"><img src="screenshots/6.jpg" alt="لقطة من التطبيق - الأحاديث النبوية أوفلاين"></div>
-    <div class="shot-card tilt-el"><img src="screenshots/7.jpg" alt="لقطة من التطبيق - اتجاه القبلة والإعدادات"></div>
+  <div class="rm-shots-track">
+    <div class="rm-shot-card"><img src="screenshots/1.jpg" alt="مواقيت الصلاة" loading="lazy"></div>
+    <div class="rm-shot-card"><img src="screenshots/2.jpg" alt="المصحف الشريف" loading="lazy"></div>
+    <div class="rm-shot-card"><img src="screenshots/3.jpg" alt="مكتبة قراء القرآن الكريم" loading="lazy"></div>
+    <div class="rm-shot-card"><img src="screenshots/4.jpg" alt="الأذكار والأدعية" loading="lazy"></div>
+    <div class="rm-shot-card"><img src="screenshots/5.jpg" alt="السبحة الإلكترونية" loading="lazy"></div>
+    <div class="rm-shot-card"><img src="screenshots/6.jpg" alt="الأحاديث النبوية أوفلاين" loading="lazy"></div>
+    <div class="rm-shot-card"><img src="screenshots/7.jpg" alt="اتجاه القبلة والإعدادات" loading="lazy"></div>
   </div>
 </section>
 
