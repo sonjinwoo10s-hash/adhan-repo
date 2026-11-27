@@ -812,5 +812,201 @@
   </a>
 </section>
 
+
+<!-- Smart Download Modals -->
+<style>
+  .rm-overlay {
+    position: fixed; inset: 0; background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(5px); display: none; align-items: center;
+    justify-content: center; z-index: 99999; padding: 16px; direction: rtl;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+  }
+  .rm-overlay.open { display: flex; }
+  .rm-modal {
+    background: linear-gradient(145deg, #0b2e23, #071c15);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 20px; width: 100%; max-width: 460px;
+    padding: 24px; color: #f5f5f5; position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6); max-height: 92vh; overflow-y: auto;
+  }
+  .rm-modal.wide { max-width: 820px; }
+  .rm-close {
+    position: absolute; top: 14px; left: 16px;
+    background: rgba(255,255,255,0.1); border: none; color: #fff;
+    width: 34px; height: 34px; border-radius: 50%; cursor: pointer; font-size: 16px;
+  }
+  .rm-close:hover { background: rgba(239,68,68,0.4); }
+  .rm-choice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
+  .rm-choice-btn {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 14px; padding: 20px 12px; color: #fff; cursor: pointer;
+    text-align: center; text-decoration: none; transition: 0.2s;
+    display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: inherit;
+  }
+  .rm-choice-btn:hover { background: rgba(16,185,129,0.2); border-color: #10b981; transform: translateY(-2px); }
+  .rm-choice-btn.win:hover { background: rgba(212,175,55,0.2); border-color: #e5c158; }
+  .rm-win-hero-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background: linear-gradient(135deg, #d4af37, #b89024); color: #071310 !important;
+    font-weight: 700; padding: 12px 22px; border-radius: 12px; border: none;
+    cursor: pointer; text-decoration: none; font-family: inherit; font-size: 0.98rem;
+    box-shadow: 0 6px 18px rgba(212,175,55,0.28); transition: 0.2s;
+  }
+  .rm-win-hero-btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+  .rm-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 12px; margin: 16px 0; }
+  .rm-step-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px; padding: 12px;
+  }
+</style>
+
+<!-- 1. نافذة اختيار النظام (أندرويد / ويندوز) -->
+<div class="rm-overlay" id="rm-chooser-modal">
+  <div class="rm-modal">
+    <button class="rm-close" onclick="rmCloseAll()">✕</button>
+    <h3 style="margin:0 0 6px; color:#e5c158; font-size:1.3rem;">اختر نظام جهازك للتحميل</h3>
+    <p style="margin:0; color:#a7c9be; font-size:0.9rem;">تطبيق رفيق المسلم مجاني بالكامل ويعمل بدون إنترنت.</p>
+    <div class="rm-choice-grid">
+      <a href="#" id="rm-choose-android" class="rm-choice-btn">
+        <span style="font-size:2rem;">📱</span>
+        <strong style="font-size:1.05rem;">للأندرويد</strong>
+        <span style="font-size:0.8rem; color:#10b981;">ملف APK مباشر</span>
+      </a>
+      <button type="button" onclick="rmStartWindowsFlow()" class="rm-choice-btn win">
+        <span style="font-size:2rem;">💻</span>
+        <strong style="font-size:1.05rem;">للويندوز</strong>
+        <span style="font-size:0.8rem; color:#e5c158;">Windows 10 / 11 (MSI)</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 2. نافذة خطوات التثبيت للويندوز + بدء التحميل التلقائي -->
+<div class="rm-overlay" id="rm-win-modal">
+  <div class="rm-modal wide">
+    <button class="rm-close" onclick="rmCloseAll()">✕</button>
+    <h3 style="margin:0 0 6px; color:#e5c158; font-size:1.35rem;">💻 جاري تحميل رفيق المسلم للويندوز...</h3>
+    <p style="margin:0; color:#d5ebe3; font-size:0.92rem;">
+      بدأ تنزيل ملف <code>RafiqAlMuslim-Setup.msi</code> تلقائياً. اتبع هذه الخطوات البسيطة عند فتحه:
+    </p>
+
+    <div class="rm-steps-grid">
+      <div class="rm-step-card">
+        <div style="font-weight:700;color:#e5c158;margin-bottom:8px;font-size:0.9rem;">1. اضغط «معلومات إضافية»</div>
+        <svg viewBox="0 0 260 155" width="100%" style="border-radius:8px;display:block;margin-bottom:8px;">
+          <rect width="260" height="155" fill="#005a9e" rx="6"/>
+          <text x="242" y="28" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="end">قام Windows بحماية الكمبيوتر</text>
+          <text x="242" y="48" fill="#d9ecff" font-size="9.5" text-anchor="end">منع SmartScreen تشغيل تطبيق غير معروف</text>
+          <rect x="132" y="60" width="112" height="24" fill="rgba(255,215,0,0.18)" stroke="#ffd700" stroke-width="2" rx="4"/>
+          <text x="188" y="76" fill="#ffffff" font-size="11" text-decoration="underline" text-anchor="middle" font-weight="bold">معلومات إضافية (More info)</text>
+          <rect x="18" y="114" width="90" height="26" fill="rgba(255,255,255,0.2)" rx="3"/>
+          <text x="63" y="131" fill="#ffffff" font-size="10.5" text-anchor="middle">عدم التشغيل</text>
+        </svg>
+        <p style="margin:0;font-size:0.82rem;color:#cfe4dc;line-height:1.5;">لو ظهرت الشاشة الزرقاء، اضغط <strong>معلومات إضافية (More info)</strong>.</p>
+      </div>
+
+      <div class="rm-step-card">
+        <div style="font-weight:700;color:#e5c158;margin-bottom:8px;font-size:0.9rem;">2. اضغط «التشغيل على أي حال»</div>
+        <svg viewBox="0 0 260 155" width="100%" style="border-radius:8px;display:block;margin-bottom:8px;">
+          <rect width="260" height="155" fill="#005a9e" rx="6"/>
+          <text x="242" y="28" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="end">قام Windows بحماية الكمبيوتر</text>
+          <text x="242" y="52" fill="#d9ecff" font-size="9.5" text-anchor="end">التطبيق: RafiqAlMuslim-Setup.msi</text>
+          <rect x="112" y="110" width="132" height="30" fill="#10b981" stroke="#ffd700" stroke-width="2" rx="4"/>
+          <text x="178" y="129" fill="#ffffff" font-size="10.5" font-weight="bold" text-anchor="middle">التشغيل على أي حال (Run anyway)</text>
+          <rect x="16" y="112" width="84" height="26" fill="rgba(255,255,255,0.2)" rx="3"/>
+          <text x="58" y="129" fill="#ffffff" font-size="10" text-anchor="middle">عدم التشغيل</text>
+        </svg>
+        <p style="margin:0;font-size:0.82rem;color:#cfe4dc;line-height:1.5;">اضغط الزر الجديد <strong>التشغيل على أي حال (Run anyway)</strong>.</p>
+      </div>
+
+      <div class="rm-step-card">
+        <div style="font-weight:700;color:#e5c158;margin-bottom:8px;font-size:0.9rem;">3. تثبيت وتشغيل جنب الساعة</div>
+        <svg viewBox="0 0 260 155" width="100%" style="border-radius:8px;display:block;margin-bottom:8px;">
+          <rect width="260" height="155" fill="#102921" rx="6"/>
+          <rect x="20" y="16" width="220" height="84" fill="#183d31" stroke="#d4af37" stroke-width="1" rx="6"/>
+          <text x="130" y="44" fill="#e5c158" font-size="12" font-weight="bold" text-anchor="middle">Rafiq Al-Muslim Setup</text>
+          <rect x="75" y="62" width="110" height="24" fill="#d4af37" rx="4"/>
+          <text x="130" y="78" fill="#071310" font-size="11" font-weight="bold" text-anchor="middle">Next ← Install</text>
+          <rect x="0" y="122" width="260" height="33" fill="#0b1512"/>
+          <circle cx="38" cy="138" r="10" fill="#0f4c3a" stroke="#e5c158" stroke-width="1.5"/>
+          <text x="38" y="142" fill="#e5c158" font-size="11" text-anchor="middle">☪</text>
+          <text x="145" y="142" fill="#9cb3ab" font-size="9.5" text-anchor="middle">يعمل تلقائياً في الخلفية جنب الساعة</text>
+        </svg>
+        <p style="margin:0;font-size:0.82rem;color:#cfe4dc;line-height:1.5;">اضغط <strong>Next ← Install</strong> وسيعمل البرنامج تلقائياً جنب الساعة.</p>
+      </div>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:10px;">
+      <span style="font-size:0.85rem; color:#a7c9be;">لم يبدأ التحميل تلقائياً؟</span>
+      <a href="https://github.com/sonjinwoo10s-hash/rafiq-al-muslim-windows/releases/latest/download/RafiqAlMuslim-Setup.msi" class="rm-win-hero-btn">
+        ⬇ اضغط هنا لإعادة التحميل
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const RM_WIN_URL = "https://github.com/sonjinwoo10s-hash/rafiq-al-muslim-windows/releases/latest/download/RafiqAlMuslim-Setup.msi";
+
+  function rmCloseAll() {
+    document.getElementById("rm-chooser-modal").classList.remove("open");
+    document.getElementById("rm-win-modal").classList.remove("open");
+  }
+
+  function rmStartWindowsFlow() {
+    document.getElementById("rm-chooser-modal").classList.remove("open");
+    document.getElementById("rm-win-modal").classList.add("open");
+    setTimeout(() => {
+      const a = document.createElement("a");
+      a.href = RM_WIN_URL;
+      a.download = "RafiqAlMuslim-Setup.msi";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }, 350);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    let androidHref = "#";
+    const clickables = Array.from(document.querySelectorAll("a, button"));
+
+    // 1. العثور على زر تحميل الأندرويد الرئيسي وإضافة زر الويندوز جنبه
+    const androidBtn = clickables.find(el => el.textContent.includes("للأندرويد") && !el.closest(".rm-overlay"));
+    if (androidBtn) {
+      if (androidBtn.tagName === "A" && androidBtn.getAttribute("href")) {
+        androidHref = androidBtn.getAttribute("href");
+      }
+      const winBtn = document.createElement("button");
+      winBtn.type = "button";
+      winBtn.className = "rm-win-hero-btn";
+      winBtn.innerHTML = "💻 تحميل للويندوز (MSI)";
+      winBtn.addEventListener("click", rmStartWindowsFlow);
+      androidBtn.insertAdjacentElement("afterend", winBtn);
+    }
+
+    const chooseAndroidEl = document.getElementById("rm-choose-android");
+    if (chooseAndroidEl) {
+      chooseAndroidEl.href = androidHref;
+      chooseAndroidEl.addEventListener("click", rmCloseAll);
+    }
+
+    // 2. ربط زر "تحميل الآن" العلوي بنافذة الاختيار
+    clickables.forEach(el => {
+      if (el.textContent.trim() === "تحميل الآن" && !el.closest(".rm-overlay")) {
+        el.addEventListener("click", e => {
+          e.preventDefault();
+          document.getElementById("rm-chooser-modal").classList.add("open");
+        });
+      }
+    });
+
+    // إغلاق النافذة عند الضغط خارجها
+    document.querySelectorAll(".rm-overlay").forEach(ov => {
+      ov.addEventListener("click", e => { if (e.target === ov) rmCloseAll(); });
+    });
+  });
+</script>
+<!-- End Smart Download Modals -->
+
 </body>
 </html>
